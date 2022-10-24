@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag docker-test:$(date +%s)
+      run: docker build . --file Dockerfile --tag ghcr.io/badrick/docker-test:latest
     - name: Push the Docker image
       run: docker push ghcr.io/badrick/docker-test:latest
