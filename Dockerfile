@@ -8,7 +8,7 @@ WORKDIR /src
 
 # Restore NuGet packages for all projects
 COPY ["Test.sln", "."]
-COPY ["Test/Test.csproj", "src/Test/"]
+COPY ["src/Test/Test.csproj", "src/Test/"]
 RUN dotnet restore
 
 # Build and test all projects
